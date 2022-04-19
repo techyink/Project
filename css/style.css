@@ -1,0 +1,307 @@
+*{
+    margin:0%;
+    padding:0%;
+
+}
+
+html{
+
+    background: #E3DCDC;
+}
+
+.back{
+
+    background: white;
+    margin-top: 05px;
+    margin-bottom: 05px;
+    margin:0 auto;
+    height: 700px;
+    width: 700px;
+    font-family: century;
+}
+.heading{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.log   {
+
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 25px;
+    height: auto;
+    width: 50%;
+
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.input{
+
+    padding :2px;
+    height: 40px;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom:10px ;
+
+}
+
+.btn{
+  margin-top: 20px;
+margin-bottom: 20px;
+background: black;
+color: white;
+padding: 10px;
+border-radius: 5px;
+width: 130px;
+
+}
+
+h1,h2,h3,h4,h5,label{
+
+    font-family: roboto;
+    color :#31313a;
+    font-weight: bold;
+}
+
+.footer{
+    height: 70px;
+    width: 100%;
+    background: brown;
+    margin-top: 40px;
+    float: left;
+}
+
+footer{
+    color: aliceblue;
+    line-height: 55px;
+    text-align: center;
+    
+}
+.sha{
+margin-left :90px;
+-webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+-moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.section{
+
+height: auto;
+width: 900px;
+margin-top: 40px;
+float: left;
+
+}
+
+.imags{
+
+    text-align: justify;
+    height: 200px;
+    width: 200px;
+    float: left;
+    margin: 20px;
+
+}
+
+
+.para{
+
+    padding: 15px;
+    text-align: justify;
+}
+
+
+#content{
+
+    height: auto;
+    width: 950px;
+    float: left;
+    margin-top: 30px;
+}
+
+.sidebar{
+float: left;
+height: auto;
+width: 400px;
+background: white;
+padding: 10px;
+margin-top: 56px;
+margin-bottom: 40px;
+margin-left: 85px;
+margin-right: 40px;
+
+}
+
+.text{
+
+    text-align :center;
+}
+
+.li{
+    margin-bottom: -1px;
+    border: 1px solid #ecf0f1;
+    position: relative;
+    padding: 10px 15px;
+    display: block;
+    background-color: white;
+}
+
+.text{
+
+    text-align: center;
+}
+
+.error{
+    margin-top: 02px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    line-height: 27px;
+    background-color: red;
+    color: yellow;
+    border-radius: 5px;
+}
+
+.nav-head{
+
+    color :white; 
+    line-height:50px; 
+    margin-left :20px; 
+    float:left;
+}
+.navbar{
+
+    height: 60px;
+    width: 100%;
+    background:brown ;
+    margin-bottom: 20px;
+}
+
+.list
+{
+    list-style: none;
+    text-align: right;
+}
+
+.list li{
+    display: inline;
+}
+
+.list li a {
+    text-decoration: none;
+    line-height: 50px;
+    color :white;
+    padding: 10px;
+}
+
+.input2{
+
+   
+    height: 40px;
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom:10px;
+}
+
+.tbox table{
+ border-collapse:collapse;
+
+ 
+ 
+}
+
+tr th {
+    padding: 40px;
+
+} 
+
+td{
+    padding: 20px;
+}
+
+.success{
+
+    line-height: 30px;
+    width: 50%;
+    background: green;
+    color:wheat;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.failure{
+    line-height: 30px;
+    width: 50%;
+    background: rgb(167, 75, 64);
+    color:wheat;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btnr{
+
+    height: 20px;
+    color:white;
+    background: orange;
+    line-height: 18px;
+    padding: 05px;
+    border-radius: 5px;
+
+}
+
+.btnr:hover{
+
+    border-radius: 5px;
+    background: black;
+    color :white;
+}
+
+.bbox{
+
+    width: 40%;
+    height: 45%;
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    float: left;
+}
+
+.input4{
+    height: 40px;
+    width: 30%;
+    margin-top: 20px;
+
+
+}
+.input5{
+
+    height: 40px;
+    width: 91%;
+
+    margin-top :12px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.rbox{
+
+    width: 40%;
+    height: 45%;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    float: right;
+}
+
+.btnt{
+margin-top: 30px;
+    height: 40px;
+    color:white;
+    background: orange;
+    line-height: 18px;
+    padding: 05px;
+    border-radius: 5px;
