@@ -47,8 +47,8 @@ session_start();
 
    $ro =  $res->fetch_assoc();
 
-   $_SESSION["AID"]=$ro["AID"];
-   $_SESSION["ANAME"]=$ro["ANAME"];
+   $_SESSION["ID"]=$ro["AID"];
+   $_SESSION["NAME"]=$ro["ANAME"];
 
   echo "<script>window.open('admin_home.php','_self');</script>";
   

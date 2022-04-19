@@ -5,11 +5,11 @@
         
 
 <?php
- if(isset($_SESSION["AID"])){
+ if(isset($_SESSION["ID"])){
      
 
     echo '
-    <li><a href= "admin_home.php">Admin Home</a></li>
+
     <li><a href ="Change_password.php">Settings</a></li>
     <li ><a href="logout.php">Logout</a></li>
     ';

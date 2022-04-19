@@ -22,8 +22,62 @@ session_cache_expire(1);
     <div class="section"> 
         
         <div id="content">
-         <h1  class = "text">Welcome <?php echo $_SESSION["ANAME"];?></h1><br><hr><br>
-        
+         <h1  class = "text">Welcome <?php echo $_SESSION["NAME"];?></h1><br><hr><br>
+
+         <label for=""><h2>View Exam details</h2></label><br><br>
+         <?php
+             
+             if(isset($_GET["mess"])){
+
+                echo "<div class='success'>Data deleted from database!!</div>";
+             }
+             
+             
+             
+             ?>
+         <div>
+<table border ="1px">
+<tr>
+<th>S.no</th>
+<th>Exam Name</th>
+<th>Exam Type</th>
+<th>Exam Date</th>
+<th>Exam Session</th>
+<th>Exam Subject</th>
+<th>Exam Class</th>
+<th>Delete</th>
+</tr>
+
+<?php
+
+$sql="select * from exam ";
+$res=$db->query($sql);
+if($res->num_rows>0){
+$i=0;
+while($ro=$res->fetch_assoc()){
+$i++;
+
+echo"<tr>
+<td>{$i}</td>
+<td>{$ro["ENAME"]}</td>
+<td>{$ro["ETYPE"]}</td>
+<td>{$ro["EDATE"]}</td>
+<td>{$ro["ESESSION"]}</td>
+<td>{$ro["SUB"]}</td>
+<td>{$ro["CLA"]}</td>
+<td ><a href ='exam_delete.php?id={$ro["EID"]}' class='btnr'>Delete</a></td>
+
+
+</tr>";
+}
+
+}
+
+?>
+
+
+</table>
+         </div>
           </div>
         </div>        
 

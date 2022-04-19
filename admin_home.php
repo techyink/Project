@@ -22,7 +22,7 @@ session_cache_expire(1);
     <div class="section"> 
         
         <div id="content">
-         <h1  class = "text">Welcome <?php echo $_SESSION["ANAME"];?></h1><br><hr><br>
+         <h1  class = "text">Welcome <?php echo $_SESSION["NAME"];?></h1><br><hr><br>
          <h2 >School Information</h2><br>
          <img src="images/home.jpg" alt="home_image" class=imags>
 

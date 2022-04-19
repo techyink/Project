@@ -1,7 +1,7 @@
 <?php
 include "dbconnect.php";
 session_start();
-session_cache_expire(1);
+$edate = $_POST['da'].'-'.$_POST['mo'].'-'.$_POST['ye'];
 
 ?>
 
@@ -22,21 +22,42 @@ session_cache_expire(1);
     <div class="section"> 
         
         <div id="content">
-         <h1  class = "text">Welcome <?php echo $_SESSION["ANAME"];?></h1><br><hr><br>
-         
-         <label for=""><h2>Set Exam Time Table Details</h2></label><br><br>
+         <h1  class = "text">Welcome <?php echo $_SESSION["NAME"];?></h1><br><hr><br>
+                 <label for=""><h2>Set Exam Time Table Details</h2></label><br><br>
+
+<?php
+        
+if (isset($_POST["submit"])){
+
+    $sql="insert into exam (ENAME,ETYPE,EDATE,ESESSION,CLA,SUB) values('{$_POST["ename"]}','{$_POST["etype"]}','{$edate}','{$_POST["esession"]}','{$_POST["cla"]}','{$_POST["sub"]}')";
+
+
+    if ($db->query($sql)){
+
+        echo "<div class='success' >Data inserted successfully</div>";
+     }
+else{
+echo "<div class ='failure'>Unble to insert into database</div>";
+
+}
+
+}
+?>
+
+         <form method="post" action="<?php echo($_SERVER["PHP_SELF"]);?>">
          <div class ='bbox'>
          <label for="">Exam Name</label>
-         <input type="text" class="input" >
+         <input  name ="ename"type="text" class="input" >
          <label for="">Select Term</label>
-         <Select class='input'>
+         <Select name ='etype'class='input'>
         <option value="Select">Select</option>
         <option value="I">Ist Term</option>
         <option value="II">IInd Term</option>
         <option value="III">IIIrd Term</option>
         </Select><br>
+        
         <label for="Date" >Exam Date</label><br>
-        <Select class='input4'>
+        <Select name= "da" class='input4'>
             <option value="Date">Date</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -72,9 +93,9 @@ session_cache_expire(1);
         
         </Select>
 
-<select  Class="input4">
+<select  name ="mo" Class="input4">
     <option value="month">Month</option>
-<option value="01>Jan</option>
+<option value="01">Jan</option>
 <option value="02">Feb</option>
 <option value="03">Mar</option>
 <option value="04">Apr</option>
@@ -88,33 +109,65 @@ session_cache_expire(1);
 <option value="12">Dec</option>
         
 </select>
-<select  Class="input4">
+<select  name ="ye" Class="input4">
 <option value="year">Year</option>
 <option value="2023">2023</option>
 <option value="2022">2022</option>
 <option value="2021">2021</option>
 </select>
-<button type ="button" class="btnt">Add Ecam Details</button>
+<button method = "submit" name ="submit" type ="btn" class="btnt">Add Exam Details</button>
  
 </div>       
 
 <div class =rbox>
     <label for="Session">Session</label>
-<select name="" id="" class="input5">
+<select name="esession" id="" class="input5">
    <option value="" >Select</option>
     <option value="FN" >FN</option>
     <option value="AN" >AN</option>
 </select>
-<br><label for="Subject">Subject</label>
-<select name="" class="input5">
+<br><label for="class">class</label>
+<select name="cla" class="input5">
+    <?php
+    
+    $sql= "Select distinct  CNAME from class ";
+    $res=$db->query($sql);
+
+    if ($res->num_rows>0){
+
+        echo"<option>Select</option>";
+        while($ro=$res->fetch_assoc()){
+        echo "
+        <option value ='{$ro["CNAME"]}'>{$ro["CNAME"]}</option>
+         ";}
+
+    }
+    
+    ?>
     
 </select>
 
 <br><label for="Subject">Subject</label>
-<select name="" class="input5">
+<select name="sub" class="input5">
+<?php
     
+    $sql= "Select distinct  SNAME from subject ";
+    $res=$db->query($sql);
+
+    if ($res->num_rows>0){
+
+        echo"<option>Select</option>";
+        while($ro=$res->fetch_assoc()){
+        echo "
+        <option value ='{$ro["SNAME"]}'>{$ro["SNAME"]}</option>
+         ";}
+
+    }
+    
+    ?>
 </select>
 </div>
+</form>
 
          </div>
         </div>        

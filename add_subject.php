@@ -22,7 +22,7 @@ session_start();
     <div class="section"> 
         
         <div id="content">
-         <h1  class = "text">Welcome <?php echo $_SESSION["ANAME"];?></h1><br><hr><br>
+         <h1  class = "text">Welcome <?php echo $_SESSION["NAME"];?></h1><br><hr><br>
 
          <?php
           

@@ -30,14 +30,14 @@ session_start();
  if (isset($_POST["login"]))
  {
 	 
- $sql= "select * from teacher where TNAME ='{$_POST["tname"]}' and  TPASS='{$_POST["tpass"]}'";
+ $sql= "select * from staff where TNAME ='{$_POST["tname"]}' and  TPASS='{$_POST["tpass"]}'";
  $res= $db->query($sql);
  
  if ($res->num_rows>0){
  
  $ro = $res->fetch_assoc();
-  $_SESSION["TID"]= $ro["TID"];
-  $_SESSION["TNAME"]= $ro["TNAME"];
+  $_SESSION["ID"]= $ro["TID"];
+  $_SESSION["NAME"]= $ro["TNAME"];
 
   echo "<script>window.open('teacher_home.php','_self');</script>";
   

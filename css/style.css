@@ -49,8 +49,8 @@ html{
 }
 
 .btn{
-  margin-top: 20px;
-margin-bottom: 20px;
+  margin-top: 04px;
+margin-bottom: 10px;
 background: black;
 color: white;
 padding: 10px;
@@ -62,7 +62,7 @@ width: 130px;
 h1,h2,h3,h4,h5,label{
 
     font-family: roboto;
-    color :#31313a;
+    color :rgb(87, 84, 78);
     font-weight: bold;
 }
 
@@ -224,9 +224,9 @@ td{
 }
 
 .success{
-
+  align-items: center;
     line-height: 30px;
-    width: 50%;
+    width: 40%;
     background: green;
     color:wheat;
     border-radius: 5px;
@@ -305,3 +305,4 @@ margin-top: 30px;
     line-height: 18px;
     padding: 05px;
     border-radius: 5px;
+

@@ -21,7 +21,7 @@ session_start();
     <div class="section"> 
         
         <div id="content">
-         <h1  class = "text">Welcome <?php echo $_SESSION["ANAME"];?></h1><br><hr><br>
+         <h1  class = "text">Welcome <?php echo $_SESSION["NAME"];?></h1><br><hr><br>
         <H3>View staff Details</H3><br>
          <form id ="frg" autocomplete ="off">
    <input type="text" id ="txt" class = "input">

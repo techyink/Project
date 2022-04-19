@@ -22,7 +22,9 @@ session_cache_expire(1);
     <div class="section"> 
         
         <div id="content">
-         <h1  class = "text">Welcome <?php echo $_SESSION["ANAME"];?></h1><br><hr><br>
+         <h1  class = "text">Welcome <?php echo $_SESSION["NAME"];?></h1><br><hr><br>
+
+         <h1 style ="text-align: center">We are working on it<br></br> We appriciate your patience </h1>
         
           </div>
         </div>        
